@@ -1,6 +1,7 @@
-export interface Todo {
+export interface ToDo {
 
-    id: number;
+    id?: number;
     label?: string;
     status: boolean;
+    position?: number;
 }
