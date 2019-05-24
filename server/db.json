@@ -1,0 +1,17 @@
+{ 
+    "toDos": [
+
+        {
+            "id": 0,
+            "label": "JSON Server",
+            "status": false,
+            "position": 1
+          },
+          {
+            "id": 1,
+            "label": "Angular lernen",
+            "status": false,
+            "position": 2
+          }
+    ]
+}

@@ -29,14 +29,18 @@ export class TemplateTodoComponent implements OnInit {
     this.ping.emit(eventObject);
   }
 
-  public changeLabel(event?: any): void {
-   
-    console.log(this.toDo.label);  
+  public changeLabel(value: string): void {
+
+    this.toDo.label = value;
   }
 
   public deleteToDo(event?: any): void {
    
-    console.log(this.toDo.id);  
+    const eventObject: EventPing = {
+      label: 'delete',
+      object: this.toDo
+    };
+    this.ping.emit(eventObject);
   }
 
 }

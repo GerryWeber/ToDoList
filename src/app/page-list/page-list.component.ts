@@ -18,27 +18,42 @@ export class PageListComponent implements OnInit {
 
     this.toDoShow = true;
     this.toDoDoneShow = false;
-    this.toDos = [
-      {
-        id: 0,
-        label: 'test',
-        status: false,
-        position: 1
-      },
-      {
-        id: 1,
-        label: 'Angular lernen',
-        status: false,
-        position: 2
-      }
-    ];
+    this.toDos = [];
+    this.toDosDone = [];
   }
 
   ngOnInit() {
   }
 
+  public createToDo(event: ToDo): void {
+
+    event.position = this.toDos.length + 1;
+    this.toDos.push(event);
+  }
+
   public updateToDos(event: EventPing): void {
 
-    console.log(event);
+    if('check' === event.label){
+      console.log(`%c"${event.label}-Event" wurde getriggert. `, `color: green;`);
+
+      if(!event.object.status){
+        this.toDosDone.splice(this.toDosDone.indexOf(event.object), 1);
+        this.toDos.push(event.object);        
+      }
+      else {
+        this.toDos.splice(this.toDos.indexOf(event.object), 1);
+        this.toDosDone.push(event.object);  
+      }
+    }
+    if('delete' === event.label){
+      console.log(`%c"${event.label}-Event" wurde getriggert. `, `color: green;`);
+
+      if(event.object.status){
+        this.toDosDone.splice(this.toDosDone.indexOf(event.object), 1);    
+      }
+      else {
+        this.toDos.splice(this.toDos.indexOf(event.object), 1);
+      }
+    }
   }
 }
