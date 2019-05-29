@@ -1,17 +1,22 @@
-{ 
-    "toDos": [
-
-        {
-            "id": 0,
-            "label": "JSON Server",
-            "status": false,
-            "position": 1
-          },
-          {
-            "id": 1,
-            "label": "Angular lernen",
-            "status": false,
-            "position": 2
-          }
-    ]
+{
+  "toDos": [
+    {
+      "id": 0,
+      "label": "JSON Server",
+      "status": true,
+      "position": 1
+    },
+    {
+      "id": 2,
+      "label": "BI 4.0 Architektur",
+      "status": false,
+      "position": 3
+    },
+    {
+      "label": "Angular lernen!",
+      "status": false,
+      "position": 3,
+      "id": 3
+    }
+  ]
 }
