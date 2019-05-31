@@ -1,3 +1,16 @@
+# Dragula
+Install in your Angular application. Go inside your project and run the following command with npm:
+`npm install dragula --save`
+
+# JSON-Server
+JSON Server is available as a NPM package. The installation can be done by using the Node.js package manager:
+
+`$ npm install -g json-server`
+
+Let’s start JSON server by executing the following command:
+
+`$ json-server --watch db.json`
+
 # ToDoList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
