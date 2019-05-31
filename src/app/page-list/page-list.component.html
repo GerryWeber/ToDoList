@@ -2,7 +2,7 @@
 
 <div class="list-view">
   <h4 (click)="toDoShow=!toDoShow">Active <span>( {{ toDos.length}} )</span></h4>
-  <div *ngIf="toDoShow" class="todo-elements">
+  <div dragula="todos" [dragulaModel]="toDos" (dragulaModelChange)="toDos = $event" *ngIf="toDoShow" class="todo-elements">
     <app-template-todo (ping)="updateToDos($event)" [toDo]="toDo" *ngFor="let toDo of toDos"></app-template-todo>
   </div>
   <app-template-todo-form (ping)="createToDo($event)" *ngIf="toDoShow"></app-template-todo-form>
